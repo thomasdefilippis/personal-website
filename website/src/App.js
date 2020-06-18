@@ -1,58 +1,33 @@
 import React from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
-import SeeProjects from './components/SeeProjects';
-import {Grid, Typography} from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
-import ProjectContent from './components/ProjectContent';
-import { Link, animateScroll as scroll } from "react-scroll";
-import ScrollUp from "./components/ScrollUp";
+import Main from './pages/Main'; 
+import NotFound from './pages/404';
+import AboutMe from './pages/AboutMe';
+import ContactMe from './pages/ContactMe';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-const useStyles = makeStyles((theme) => ({
-  body: {
-    marginTop: '400px'
-  },
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Lin,
+    Redirect,
+    withRouter
+}   from 'react-router-dom';
 
-  projects:{
-    paddingTop: '10px',
-    paddingBottom: '200px'
-  },
-
-  example:{
-    color: "white",
-    fontSize: '40px',
-    
-  }
-
-}))
-
-function App() {
-  const classes = useStyles();
-  return (
-    <div>
-      <div className="App">
-        <Grid container direction="column">
-          <Grid item >
-            <NavBar />
-          </Grid >
-        </Grid>
-        <SeeProjects href="#Projects"/>
-      </div>
-      <div className='Projects' id="projects">
-        <ScrollUp />
-        <Grid container direction='row' className={classes.projects} >
-          <Grid item className={classes.example} xs={false} sm={1} md={1} lg={2} xl={2}>
-          </Grid>
-          <Grid item className={classes.example} xs={12} sm={10} md={10} lg={8} xl={8}>
-            <ProjectContent />
-          </Grid>
-          <Grid item className={classes.example} xs={false} sm={1} md={1} lg={2} xl={2}>
-          </Grid>
-        </Grid>
-      </div>
-
-    </div>
-  );
+class App extends React.Component{
+    render(){
+        return(
+            <Router>
+                <Switch>
+                    <Route exact path='/' component={Main} />
+                    <Route path='/AboutMe' component={AboutMe} />
+                    <Route path='/ContactMe' component={ContactMe} />
+                    <Route path='/404' component={NotFound} />
+                    <Redirect to='/404' />
+                </Switch>
+            </Router>
+        )
+    }
 }
 
 export default App;

@@ -1,6 +1,7 @@
 import BorderRadius from './Border-Radius.PNG';
 import Calculator from './Calculator.jpg';
-import MountHood from './mount-hood.jpg';
+import BookFinder from './Book-Finder.JPG';
+import GradeParticipation from './grade-participation.JPG'
 
 export default [
     {
@@ -13,7 +14,15 @@ export default [
 
     {
         title: 'Book-Finder App',
-        imageUrl: MountHood,
+        imageUrl: BookFinder,
+        description: '',
+        gifUrl: '',
+        sourceLink: ''
+    },
+
+    {
+        title: 'Grade Particpation App',
+        imageUrl: GradeParticipation,
         description: '',
         gifUrl: '',
         sourceLink: ''
