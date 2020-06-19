@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     navigation:{
         width: '100%',
         minHeight: '125vh',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        marginBottom: '200px'
     },
 
 
@@ -29,13 +30,31 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: '100px'
     },
   
-    
-      
+    imageContainer:{
+      marginTop: '20px',
+      margin: '10px',
+      position: 'relative',
+      float: 'left',
+      width: '175px',
+      height: '175px',
+      shapeOutside: 'circle()'
+    },
+
+
+    myFace:{
+      position: 'absolute',
+      borderRadius: '50%',
+      border: '4px solid rgb(228, 130, 74)',
+      top: '0',
+      left: '0',
+      width: '95%',
+      height: '95%',
+      objectFit: 'cover'
+    }, 
     
     example:{
     color: "white",
     fontSize: '40px',
-    
     }
   
 }));
@@ -57,7 +76,10 @@ const AboutMe = () =>{
                     <SeeProjects href="#Projects"/>
                 </Grid>
                 <Grid item xs={7} sm={6} md={6} lg={8} xl={9}>
-                    <Description className={classes.description}/>
+                  <div className={classes.imageContainer}>
+                    <img src={require('../components/AboutMe/myFace.jpg')} align='left'height="175px"  className={classes.myFace}/>
+                  </div>
+                  <Description className={classes.description}/>
                 </Grid>
                 <Grid item xs={1} sm={2} md={2} md={false}></Grid>
             </Grid>

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
     titleIcon: {
         color: 'rgb(228, 130, 74)',
-        marginTop: '30px',
+        marginTop: '10px',
         marginRight: '10px',
         fontSize: '50px',
         border: 'solid 2px rgb(228, 130, 74)'
