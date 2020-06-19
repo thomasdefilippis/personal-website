@@ -19,7 +19,7 @@ const ProjectContent = () =>{
         const {title, imageUrl, description, gifUrl, sourceLink} = projectObj;
         return(
             <Grid item xs={12} md={4} className={classes.projectContainer}>
-                <ProjectCard { ...projectObj } />
+                <ProjectCard projectObj={ projectObj } />
             </Grid>
         )
     }

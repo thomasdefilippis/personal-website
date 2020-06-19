@@ -1,14 +1,15 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
+import { withStyles } from '@material-ui/core/styles';
+import { Card } from '@material-ui/core';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ModalComponent from './Modal';
 
-const useStyles = makeStyles({
+const useStyles = (theme) =>({
   root: {
     maxWidth: 345,
     backgroundColor: 'black',
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
     '&:hover': {
         borderRadius: '15%',
         opacity: '0.8'
-    }
+    },
     
     
   },
@@ -36,41 +37,81 @@ const useStyles = makeStyles({
           textDecoration: 'underline',
           opacity: '1.0'
       }
-  }
+  },
+
+  sourceLink:{
+    textDecoration: 'none'
+  },
+
+  builtWith: {
+    fontSize: '20px',
+  },
+
 });
 
-export default function ProjectCard(props) {
-  const classes = useStyles();
-  const {title, imageUrl, description, gifUrl, sourceLink} = props;
-  return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
+class ProjectCard extends React.Component {
+  constructor(props){
+    super(props);
+    this.state ={
+      open: false
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-          component='img'
-          alt={title}
-          height="300"
-          image= {imageUrl}
-          title={title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.typographyStyles}>
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.typographyStyles}>
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.links}>
-          Preview
-        </Button>
-        <Button size="small" color="primary" className={classes.links}>
-          Source Code
-        </Button>
-      </CardActions>
-    </Card>
-  );
+  handleClick () {
+    console.log(this.state.open);
+    if(this.state.open === false){
+      this.setState({
+        open: true
+      })
+    }
+    else{
+      this.setState({
+        open: false
+      })
+    }
+  }
+  render(){
+   
+  const { classes } = this.props;
+  const {title, imageUrl, description, gifUrl, sourceLink} = this.props.projectObj;
+    return (
+    <div>
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+
+            component='img'
+            alt={title}
+            height="300"
+            image= {imageUrl}
+            title={title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2" className={classes.typographyStyles}>
+              {title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.typographyStyles}>
+              {description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions >
+          <Button size="small" color="primary" className={classes.links} onClick={this.handleClick}>
+            Preview
+          </Button>
+          <a href={sourceLink} target="_blank" className={classes.sourceLink}>
+            <Button size="small" color="primary" className={classes.links} >
+              Source Code
+            </Button>
+          </a>
+        </CardActions>
+      </Card>
+      <ModalComponent open={this.state.open} onClick={this.handleClick} title={title} gifUrl={gifUrl}/>
+    </div>
+    )
+  };
 }
+
+export default withStyles(useStyles)(ProjectCard);
 
