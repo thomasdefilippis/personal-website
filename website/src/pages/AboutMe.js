@@ -6,6 +6,8 @@ import ProjectContent from '../components/mainPage/ProjectContent';
 import ScrollUp from '../components/mainPage/ScrollUp';
 import Description from '../components/AboutMe/Description';
 import Footer from '../components/mainPage/Footer';
+import { motion } from 'framer-motion';
+import { pageVariant, pageTransition } from './PageTransition';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -17,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         minHeight: '125vh',
         backgroundColor: 'black',
-        marginBottom: '200px'
     },
 
 
@@ -62,7 +63,14 @@ const useStyles = makeStyles((theme) => ({
 const AboutMe = () =>{
     const classes = useStyles();
     return(
-    <div className={classes.root}>
+    <motion.div 
+      initial='out' 
+      animate='in' 
+      exit='out'
+      variants={pageVariant}
+      className={classes.root}
+      transition={pageTransition}
+    >
       <div className={classes.navigation}>
         <Grid container direction="column">
           <Grid item >
@@ -100,7 +108,7 @@ const AboutMe = () =>{
         </Grid>
       </div>
       <Footer />
-    </div>
+    </motion.div>
     )
 }
 

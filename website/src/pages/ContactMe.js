@@ -6,6 +6,8 @@ import ProjectContent from '../components/mainPage/ProjectContent';
 import ScrollUp from '../components/mainPage/ScrollUp';
 import Form from '../components/ContactMe/Form.js';
 import Footer from '../components/mainPage/Footer';
+import { motion } from 'framer-motion';
+import { pageVariant, pageTransition } from './PageTransition';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -42,7 +44,14 @@ const useStyles = makeStyles((theme) => ({
 const ContactMe = () =>{
     const classes = useStyles();
     return(
-    <div className={classes.root}>
+    <motion.div
+      initial='out' 
+      animate='in' 
+      exit='out'
+      variants={pageVariant}
+      className={classes.root}
+      transition={pageTransition}
+    >
       <div className={classes.navigation}>
         <Grid container direction="column">
           <Grid item >
@@ -78,7 +87,7 @@ const ContactMe = () =>{
         </Grid>
       </div>
       <Footer />
-    </div>
+    </motion.div>
     )
 }
 

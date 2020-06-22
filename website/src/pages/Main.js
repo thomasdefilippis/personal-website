@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import ProjectContent from '../components/mainPage/ProjectContent';
 import ScrollUp from "../components/mainPage/ScrollUp";
 import Footer from '../components/mainPage/Footer';
+import {motion} from 'framer-motion';
+import { pageVariant, pageTransition } from './PageTransition';
 
 
 
@@ -31,7 +33,13 @@ const useStyles = makeStyles((theme) => ({
 function Main() {
   const classes = useStyles();
   return (
-    <div>
+    <motion.div
+      initial='out' 
+      animate='in' 
+      exit='out'
+      variants={pageVariant}
+      transition={pageTransition}
+    >
       <div className="App">
         <Grid container direction="column">
           <Grid item >
@@ -54,7 +62,7 @@ function Main() {
       </div>
       <Footer />
 
-    </div>
+    </motion.div>
   );
 }
 
