@@ -18,7 +18,7 @@ const useStyles = (theme) =>({
     margin: '0 auto',
     padding: '5px',
     '&:hover': {
-        borderRadius: '15%',
+        borderRadius: '5%',
         opacity: '0.8'
     },
     
@@ -100,7 +100,7 @@ class ProjectCard extends React.Component {
           <Button size="small" color="primary" className={classes.links} onClick={this.handleClick}>
             Preview
           </Button>
-          <a href={sourceLink} target="_blank" className={classes.sourceLink}>
+          <a href={sourceLink} rel="noopener noreferrer" target="_blank" className={classes.sourceLink}>
             <Button size="small" color="primary" className={classes.links} >
               Source Code
             </Button>

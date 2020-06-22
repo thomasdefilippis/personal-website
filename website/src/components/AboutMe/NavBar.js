@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: "none",
         backgroundColor: "#222222",
-        height: '70px',
         height: 'auto'
     },
 

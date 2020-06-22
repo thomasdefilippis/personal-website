@@ -2,12 +2,30 @@ import BorderRadius from './Border-Radius.PNG';
 import Calculator from './Calculator.jpg';
 import BookFinder from './Book-Finder.JPG';
 import GradeParticipation from './grade-participation.JPG';
+import ChoreBot from './Chore-Bot.JPG';
 import calculator from './calculator.gif';
 import bookFinder from './bookFinder.gif';
 import borderRadius from './border-radius-previewer.gif';
 import gradeParticipation from './gradeParticipation.gif';
+import choreBot from './choreBot.gif'
 
 export default [
+    {
+        title: 'Chore Bot Game',
+        imageUrl: ChoreBot,
+        description: 'In this game, the user must select one of three doors while trying to avoid the chore bot who hides behind one of the doors. This application is built in raw javascript (no libraries), and it manipulates DOM elements to display different images onto the HTML, canvas element.',
+        gifUrl: choreBot,
+        sourceLink: 'https://github.com/thomasdefilippis/Chore-Bot-Game'
+    },
+
+    {
+        title: 'Book-Finder App',
+        imageUrl: BookFinder,
+        description: 'Developed with React and Material UI, this application fetches data from the google books API and extracts ten books from the returned json object. The application grabs the users text input for Author and/or Title and use them to manipulate the queries parameters on the API url.',
+        gifUrl: bookFinder,
+        sourceLink: 'https://github.com/thomasdefilippis/Book-Finder-App'
+    },
+
     {
         title: 'Chrome Calculator Extension',
         imageUrl: Calculator,
@@ -15,14 +33,7 @@ export default [
         gifUrl: calculator,
         sourceLink: 'https://github.com/thomasdefilippis/React-JS-Calculator'
     },
-
-    {
-        title: 'Book-Finder App',
-        imageUrl: BookFinder,
-        description: 'Developed with React and Material UI, this application fetches data from the google books api and extracts ten books from the returned json object. The application grabs the users text input for Author and/or Title and use them to manipulate the queries parameters on the api url',
-        gifUrl: bookFinder,
-        sourceLink: 'https://github.com/thomasdefilippis/Book-Finder-App'
-    },
+    
 
     {
         title: 'Grade Particpation App',

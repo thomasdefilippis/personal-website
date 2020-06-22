@@ -1,13 +1,11 @@
 import React from 'react';
-import { makeStyles, Grid, Button} from '@material-ui/core';
-import {Link} from 'react-router-dom';
+import { makeStyles, Grid} from '@material-ui/core';
 import NavBar from '../components/AboutMe/NavBar';
 import SeeProjects from '../components/ContactMe/SeeProjects';
 import ProjectContent from '../components/mainPage/ProjectContent';
 import ScrollUp from '../components/mainPage/ScrollUp';
 import Form from '../components/ContactMe/Form.js';
 import Footer from '../components/mainPage/Footer';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const useStyles = makeStyles((theme) => ({
     root:{

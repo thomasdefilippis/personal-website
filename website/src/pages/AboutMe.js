@@ -77,7 +77,7 @@ const AboutMe = () =>{
                 </Grid>
                 <Grid item xs={7} sm={6} md={6} lg={8} xl={9}>
                   <div className={classes.imageContainer}>
-                    <img src={require('../components/AboutMe/myFace.jpg')} align='left'height="175px"  className={classes.myFace}/>
+                    <img alt="myFace is supposed to be here" src={require('../components/AboutMe/myFace.jpg')} align='left'height="175px"  className={classes.myFace}/>
                   </div>
                   <Description className={classes.description}/>
                 </Grid>

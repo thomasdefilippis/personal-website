@@ -73,12 +73,9 @@ const Links = () =>{
             <div className={classes.line}>
 
             </div>
-            <Link
-                        to='/'
-                        className={classes.Link}
-            >
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1gjddR9ouFWNtRT4nRRxqtYcLG1RAE9Gj/view?usp=sharing" className={classes.Link}>
                 <Button className={classes.buttonStyles} > Resume</Button>
-            </Link>
+           </a>
         </div>
     )
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {AppBar, Grid} from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TitleIcon from '@material-ui/icons/Title';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -62,13 +61,13 @@ const Footer = () => {
             <Toolbar>
                 <Grid container direction="row">
                     <Grid item className={classes.linkGrid} xs={11}>
-                        <a className={classes.LinkStyles} href="https://github.com/thomasdefilippis">
+                        <a className={classes.LinkStyles} rel="noopener noreferrer" target="_blank" href="https://github.com/thomasdefilippis">
                             <GitHubIcon className={classes.IconStyles} />
                         </a>
-                        <a className={classes.LinkStyles} href="https://www.linkedin.com/in/thomas-defilippis-55b6671a2/">
+                        <a className={classes.LinkStyles} rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/thomas-defilippis-55b6671a2/">
                             <LinkedInIcon className={classes.IconStyles} />
                         </a>
-                        <a className={classes.LinkStyles} href="https://www.facebook.com/thomas.defilippis.50">
+                        <a className={classes.LinkStyles} rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/thomas.defilippis.50">
                             <FacebookIcon className={classes.IconStyles} />
                         </a>
                     </Grid>
