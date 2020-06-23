@@ -79,6 +79,7 @@ const useStyles = (theme) => ({
         fontFamily: 'roboto',
         fontWeight: 'bold',
         borderRadius: '10%',
+        border: 'none',
         opacity: '1',
         '&:hover': {
             opaicty: '0.3'

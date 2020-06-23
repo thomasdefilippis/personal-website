@@ -3,12 +3,15 @@ import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-scroll";
 import Links from './Links';
+import ContactLinks from '../ContactMe/ContactLinks';
+import { Route, Switch } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     buttonContainerStyles: {
         width: '100%',
         height: 'auto',
         marginTop: '90px',
+        marginLeft: '2px'
     },
 
     buttonStyles:{
@@ -57,7 +60,10 @@ const SeeProjects = () => {
             <div className={classes.line}>
 
             </div>
-            <Links />
+                <Switch>
+                    <Route path="/ContactMe" component={ContactLinks}/>
+                    <Route path="/AboutMe" component={Links} />
+                </Switch>
         </div>
     )
 }

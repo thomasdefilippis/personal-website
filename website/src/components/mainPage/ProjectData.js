@@ -49,5 +49,12 @@ export default [
         description: 'Built in React, this app allows the user to manipulate the border radius of a div element to create a wide variety of shapes.',
         gifUrl: borderRadius,
         sourceLink: 'https://github.com/thomasdefilippis/Border-Radius-Previewer'
+    },
+    {
+        title: 'Musicon Website',
+        imageUrl: BorderRadius,
+        description: 'Built in React, this app allows the user to manipulate the border radius of a div element to create a wide variety of shapes.',
+        gifUrl: borderRadius,
+        sourceLink: 'https://github.com/thomasdefilippis/Border-Radius-Previewer'
     }
 ]

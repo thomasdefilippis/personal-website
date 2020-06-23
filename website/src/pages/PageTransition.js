@@ -1,11 +1,11 @@
 export const pageVariant = {
     in: {
         opacity: 1,
-        x:"0",
+        y:"0",
     },
     out: {
-        opacity: .5,
-        x:'-100vh',
+        opacity: 0,
+        y:'-100%',
     }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-scroll";
-import Links from './Links';
+import ContactLinks from './ContactLinks';
 
 const useStyles = makeStyles((theme) => ({
     buttonContainerStyles: {
@@ -57,7 +57,7 @@ const SeeProjects = () => {
             <div className={classes.line}>
 
             </div>
-            <Links />
+            <ContactLinks />
         </div>
     )
 }

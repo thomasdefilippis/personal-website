@@ -29,28 +29,20 @@ const useStyles = makeStyles((theme) => ({
             border: 'solid 4px rgb(228, 130, 74)',
         }
     },
-    
-    buttonCodingChallenges:{
-        fontSize: '20px',
-        height: '125px',
-        width: '125px',
-        border: 'solid 2px rgb(228, 130, 74)',
-        borderRadius: '50%',
-        backgroundColor: 'black',
-        color: 'rgb(228, 130, 74)',
-        textTransform: 'none',
-        marginBottom: '0px',
-        marginTop: '50px',
-        '&:hover': {
-            border: 'solid 4px rgb(228, 130, 74)',
-        }
-    },
 
     arrowStyles:{
         position: 'relative',
         fontSize: '100px',
         color: "rgb(228, 130, 74)"
-    }
+    },
+
+    line:{
+        height: '40px',
+        borderLeft: '3px solid rgb(228, 130, 74)',
+        width: '5px',
+        marginLeft: '72px',
+
+    },
     
 }));
 
@@ -72,6 +64,9 @@ const ScrollUp = () => {
             >
                 <Button className={classes.buttonStyles} >Up</Button>
             </Link>
+            <div className={classes.line}>
+
+            </div>
             <Link
                     activeClass="active"
                     to="navBar"
@@ -80,7 +75,7 @@ const ScrollUp = () => {
                     offset={-70}
                     duration= {500}
             >
-                <Button className={classes.buttonCodingChallenges} >Coding Challenges</Button>
+                <Button className={classes.buttonStyles} >Coding Challenges</Button>
             </Link>
             <br></br>
             <ArrowDownwardIcon className={classes.arrowStyles} />
