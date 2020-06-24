@@ -51,7 +51,7 @@ const useStyles = makeStyles(() => ({
     
 }));
 
-const Links = () =>{
+const ContactLinks = () =>{
     const classes = useStyles();
     return(
         <div>
@@ -80,4 +80,4 @@ const Links = () =>{
     )
 }
 
-export default Links;
+export default ContactLinks;

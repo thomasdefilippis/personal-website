@@ -51,16 +51,16 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'roboto',
         fontSize: '40px',
         textAlign: 'center'
-      },
+    },
     
     
-      title:{
-          width: '100%',
-          height: 'auto',
-          borderBottom: 'solid 3px rgb(228, 130, 74)',
-          borderTop: 'solid 3px rgb(228, 130, 74)',
-          marginTop: '70px'
-      },
+    title:{
+        width: '100%',
+        height: 'auto',
+        borderBottom: 'solid 3px rgb(228, 130, 74)',
+        borderTop: 'solid 3px rgb(228, 130, 74)',
+        marginTop: '70px'
+    },
   
 }));
 

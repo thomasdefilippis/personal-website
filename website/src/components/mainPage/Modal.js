@@ -25,7 +25,7 @@ export default function ModalComponent(props) {
       <Dialog
         maxWidth='xl'
         className={classes.dialog}
-        open={props.open || props.over}
+        open={props.open}
         onClose={props.onClick}
         aria-labelledby="max-width-dialog-title"
       >
