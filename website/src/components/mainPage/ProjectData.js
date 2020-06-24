@@ -7,9 +7,11 @@ import calculator from './calculator.gif';
 import bookFinder from './bookFinder.gif';
 import borderRadius from './border-radius-previewer.gif';
 import gradeParticipation from './gradeParticipation.gif';
-import choreBot from './choreBot.gif'
+import choreBot from './choreBot.gif';
+import Musicon from './Musicon.jpg';
+import musiconGif from './musiconGif.gif';
 
-export default [
+  export default  [
     {
         title: 'Chore Bot Game',
         imageUrl: ChoreBot,
@@ -50,11 +52,13 @@ export default [
         gifUrl: borderRadius,
         sourceLink: 'https://github.com/thomasdefilippis/Border-Radius-Previewer'
     },
+
     {
         title: 'Musicon Website',
-        imageUrl: BorderRadius,
-        description: 'Built in React, this app allows the user to manipulate the border radius of a div element to create a wide variety of shapes.',
-        gifUrl: borderRadius,
-        sourceLink: 'https://github.com/thomasdefilippis/Border-Radius-Previewer'
+        imageUrl: Musicon,
+        description: 'A demo music website developed in handlebarsjs. This website uses a template from handlebars to display musical instruments that are available for sale.',
+        gifUrl: musiconGif,
+        sourceLink: 'https://github.com/thomasdefilippis/Musicon'
     }
 ]
+

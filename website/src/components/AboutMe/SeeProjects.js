@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     buttonContainerStyles: {
         width: '100%',
         height: 'auto',
-        marginTop: '90px',
+        marginTop: '30px',
         marginLeft: '2px'
     },
 

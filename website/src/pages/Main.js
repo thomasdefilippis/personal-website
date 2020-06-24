@@ -9,23 +9,45 @@ import ScrollUp from "../components/mainPage/ScrollUp";
 import Footer from '../components/mainPage/Footer';
 import {motion} from 'framer-motion';
 import { pageVariant, pageTransition } from './PageTransition';
+import CodingChallenges from '../components/mainPage/CodingChallenges';
 
 
 
 const useStyles = makeStyles((theme) => ({
   body: {
-    marginTop: '400px'
+    marginBottom: '400px'
   },
 
   projects:{
     paddingTop: '0px',
-    paddingBottom: '100px'
+    paddingBottom: '100px',
+    marginTop: '25px'
   },
 
   example:{
     color: "white",
     fontSize: '40px',
     
+  },
+
+  header:{
+    color: 'rgb(228, 130, 74)',
+    fontFamily: 'roboto',
+    fontSize: '40px',
+    textAlign: 'center'
+  },
+
+
+  title:{
+      width: '100%',
+      height: 'auto',
+      borderBottom: 'solid 3px rgb(228, 130, 74)',
+      borderTop: 'solid 3px rgb(228, 130, 74)',
+      marginTop: '70px'
+  },
+
+  App:{
+    height: 'auto'
   }
 
 }))
@@ -41,7 +63,7 @@ function Main() {
       transition={pageTransition}
     >
       <div className="App">
-        <Grid container direction="column">
+        <Grid container direction="column" >
           <Grid item >
             <NavBar />
           </Grid >
@@ -50,6 +72,9 @@ function Main() {
       </div>
       <div className='Projects' id="projects">
         <ScrollUp />
+        <header className={classes.title} >
+            <h1 className={classes.header}>Projects</h1>
+        </header>
         <Grid container direction='row' className={classes.projects} >
           <Grid item className={classes.example} xs={false} sm={1} md={1} lg={2} xl={2}>
           </Grid>
@@ -60,6 +85,7 @@ function Main() {
           </Grid>
         </Grid>
       </div>
+      <CodingChallenges/>
       <Footer />
 
     </motion.div>

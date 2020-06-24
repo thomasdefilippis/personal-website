@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import {TextField } from '@material-ui/core';
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
+
 const useStyles = (theme) => ({
     root:{
         '& label.Mui-focused': {
@@ -137,13 +138,16 @@ class Form extends React.Component {
             }else{
                 Swal.fire({
                     title: 'Invalid entry: you must enter something into each box',
-                    icon: 'error'
+                    icon: 'error',
+                    confirmButtonColor: 'rgb(228, 130, 74)',
                 })
             }
         }else{
             Swal.fire({
                 title: 'Invalid email',
-                icon: 'error'
+                icon: 'error',
+                confirmButtonColor: 'rgb(228, 130, 74)',
+                
             })
         }
     }
@@ -162,14 +166,16 @@ class Form extends React.Component {
             // Email successfully sent alert
             Swal.fire({
               title: 'Email Successfully Sent',
-              icon: 'success'
+              icon: 'success',
+              confirmButtonColor: 'rgb(228, 130, 74)',
             })
           })
           // Email Failed to send Error alert
           .catch(err => {
             Swal.fire({
               title: 'Email Failed to Send',
-              icon: 'error'
+              icon: 'error',
+              confirmButtonColor: 'rgb(228, 130, 74)',
             })
             console.error('Email Error:', err)
           })

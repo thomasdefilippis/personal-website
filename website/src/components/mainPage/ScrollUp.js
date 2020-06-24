@@ -1,18 +1,18 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { Link } from "react-scroll";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     buttonContainerStyles: {
 
         width: '150px',
-        height: '300px',
+        height: 'auto',
         margin: '0 auto',
         textAlign: 'center',
-        marginBottom: '250px'
+        marginBottom: '0px'
     },
 
     buttonStyles:{
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
     arrowStyles:{
         position: 'relative',
-        fontSize: '100px',
+        fontSize: '90px',
         color: "rgb(228, 130, 74)"
     },
 
@@ -44,12 +44,14 @@ const useStyles = makeStyles((theme) => ({
 
     },
     
-}));
+});
 
-const ScrollUp = () => {
+
+
+class ScrollUp extends React.Component {
     
-    
-    const classes =  useStyles();
+    render(){
+    const { classes } =  this.props;
     return(
         <div className={classes.buttonContainerStyles}>
             <ArrowUpwardIcon className={classes.arrowStyles} />
@@ -65,11 +67,10 @@ const ScrollUp = () => {
                 <Button className={classes.buttonStyles} >Up</Button>
             </Link>
             <div className={classes.line}>
-
             </div>
             <Link
                     activeClass="active"
-                    to="navBar"
+                    to="codingChallenges"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -82,6 +83,8 @@ const ScrollUp = () => {
 
         </div>
     )
+    }
 }
 
-export default ScrollUp;
+
+export default withStyles(useStyles)(ScrollUp);

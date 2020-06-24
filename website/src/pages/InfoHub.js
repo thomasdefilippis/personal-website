@@ -11,6 +11,7 @@ import { pageVariant, pageTransition } from './PageTransition';
 import AboutMe from './AboutMe';
 import ContactMe from './ContactMe';
 import { Route, Switch } from 'react-router-dom';
+import CodingChallenges from '../components/mainPage/CodingChallenges';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,13 +37,30 @@ const useStyles = makeStyles((theme) => ({
 
     projects:{
       paddingTop: '10px',
-      paddingBottom: '100px'
+      paddingBottom: '100px',
+      marginTop: '100px'
     },
     
     example:{
     color: "white",
     fontSize: '40px',
-    }
+    },
+
+    header:{
+        color: 'rgb(228, 130, 74)',
+        fontFamily: 'roboto',
+        fontSize: '40px',
+        textAlign: 'center'
+      },
+    
+    
+      title:{
+          width: '100%',
+          height: 'auto',
+          borderBottom: 'solid 3px rgb(228, 130, 74)',
+          borderTop: 'solid 3px rgb(228, 130, 74)',
+          marginTop: '70px'
+      },
   
 }));
 
@@ -87,6 +105,9 @@ const InfoHub = () =>{
             </div>
             <div className='Projects' id="projects">
                 <ScrollUp />
+                <header className={classes.title} >
+                    <h1 className={classes.header}>Projects</h1>
+                </header>
                 <Grid container direction='row' className={classes.projects} >
                 <Grid item className={classes.example} xs={false} sm={1} md={1} lg={2} xl={2}>
                 </Grid>
@@ -97,6 +118,7 @@ const InfoHub = () =>{
                 </Grid>
                 </Grid>
             </div>
+            <CodingChallenges />
             <Footer />
         </div>
         )
